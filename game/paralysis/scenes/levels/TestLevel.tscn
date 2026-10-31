@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b148e8k301b5f"]
 
 [ext_resource type="PackedScene" uid="uid://ctio42bxd1exb" path="res://scenes/characters/Player.tscn" id="1_86d4f"]
+[ext_resource type="PackedScene" uid="uid://cys4ln3x1wfba" path="res://scenes/UI/debug_ui.tscn" id="2_w20ko"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_froo7"]
 size = Vector2(1000, 20)
@@ -21,3 +22,5 @@ color = Color(0, 0, 0, 1)
 
 [node name="Player" parent="." unique_id=1403844614 instance=ExtResource("1_86d4f")]
 position = Vector2(-5, -43)
+
+[node name="CanvasLayer" parent="." unique_id=1684133970 instance=ExtResource("2_w20ko")]
