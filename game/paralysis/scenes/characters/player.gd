@@ -3,12 +3,14 @@ extends CharacterBody2D
 @export_group("Déplacements")
 @export var speed: float = 220.0
 @export var acceleration: float = 1400.0
-@export var friction: float = 1200.0
+@export var friction: float = 2000.0
 
 @export_group("Saut & Physique")
-@export var jump_velocity: float = -380.0
+@export var jump_velocity: float = -300.0
 @export var coyote_time: float = 0.15
 @export var jump_buffer_time: float = 0.12
+
+@export var fall_gravity_multiplier: float = 1.8
 
 var gravity: float = ProjectSettings.get_setting("physics/2d/default_gravity")
 var coyote_timer: float = 0.0
@@ -17,8 +19,12 @@ var jump_buffer_timer: float = 0.0
 func _physics_process(delta: float) -> void:
 	# 1. Appliquer la gravité et le Coyote Time
 	if not is_on_floor():
-		velocity.y += gravity * delta
-		coyote_timer -= delta
+		# Calcul de la gravité effective pour cette frame
+		var applied_gravity: float = gravity
+		if velocity.y > 0: # Le joueur est en train de tomber
+			applied_gravity *= fall_gravity_multiplier
+			velocity.y += applied_gravity * delta
+			coyote_timer -= delta
 	else:
 		coyote_timer = coyote_time
 

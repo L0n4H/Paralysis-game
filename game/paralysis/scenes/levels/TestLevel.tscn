@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://ctio42bxd1exb" path="res://scenes/characters/Player.tscn" id="1_86d4f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_froo7"]
-size = Vector2(100, 20)
+size = Vector2(1000, 20)
 
 [node name="TestLevel" type="Node2D" unique_id=1310877574]
 
@@ -13,9 +13,9 @@ size = Vector2(100, 20)
 shape = SubResource("RectangleShape2D_froo7")
 
 [node name="ColorRect" type="ColorRect" parent="Floor" unique_id=974834359]
-offset_left = -50.0
+offset_left = -502.0
 offset_top = -10.0
-offset_right = 50.0
+offset_right = 498.0
 offset_bottom = 10.0
 color = Color(0, 0, 0, 1)
 
