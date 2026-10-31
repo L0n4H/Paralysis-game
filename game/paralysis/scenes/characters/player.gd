@@ -23,8 +23,8 @@ func _physics_process(delta: float) -> void:
 		var applied_gravity: float = gravity
 		if velocity.y > 0: # Le joueur est en train de tomber
 			applied_gravity *= fall_gravity_multiplier
-			velocity.y += applied_gravity * delta
-			coyote_timer -= delta
+		velocity.y += applied_gravity * delta
+		coyote_timer -= delta
 	else:
 		coyote_timer = coyote_time
 
