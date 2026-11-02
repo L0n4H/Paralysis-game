@@ -11,3 +11,10 @@ offset_top = 41.0
 offset_right = 174.0
 offset_bottom = 68.0
 step = 0.1
+
+[node name="BPMLabel" type="Label" parent="." unique_id=552436134]
+offset_left = 40.0
+offset_top = 89.0
+offset_right = 107.0
+offset_bottom = 112.0
+text = "BPM : 60"
